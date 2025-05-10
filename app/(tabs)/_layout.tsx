@@ -18,6 +18,14 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="cog" size={ICON_SIZE} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
