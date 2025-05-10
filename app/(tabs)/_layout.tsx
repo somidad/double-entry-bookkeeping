@@ -5,11 +5,14 @@ const ICON_SIZE = 28;
 
 export default function TabLayout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: "Index",
           tabBarIcon: ({ color }) => (
             <Icon name="home" size={ICON_SIZE} color={color} />
           ),
