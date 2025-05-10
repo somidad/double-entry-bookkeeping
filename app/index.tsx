@@ -1,5 +1,6 @@
 import { useRouter } from "expo-router";
-import { Button, View } from "react-native";
+import { View } from "react-native";
+import { Button } from "@/components/button";
 
 export default function Landing() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function Landing() {
         alignItems: "center",
       }}
     >
-      <Button title="Go to tabs" onPress={goToTabs} />
+      <Button title="Sign in" onPress={goToTabs} />
     </View>
   );
 }

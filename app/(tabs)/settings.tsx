@@ -1,5 +1,6 @@
 import { useRouter } from "expo-router";
-import { Button, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
+import { Button } from "@/components/button";
 
 export default function Settings() {
   const router = useRouter();
