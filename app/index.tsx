@@ -3,7 +3,7 @@ import { Button, View } from "react-native";
 
 export default function Landing() {
   const router = useRouter();
-  const goToTabs = () => router.replace("/(tabs)");
+  const goToTabs = () => router.push("/(tabs)");
 
   return (
     <View
