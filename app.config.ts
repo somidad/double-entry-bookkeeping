@@ -14,9 +14,11 @@ export default {
       backgroundColor: "#ffffff",
     },
     ios: {
+      bundleIdentifier: "react-native.template",
       supportsTablet: true,
     },
     android: {
+      package: "react_native.template",
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#ffffff",
@@ -26,6 +28,6 @@ export default {
     web: {
       favicon: "./assets/favicon.png",
     },
-    plugins: ["expo-router", "expo-asset"],
+    plugins: ["expo-dev-client", "expo-router", "expo-asset"],
   },
 };
