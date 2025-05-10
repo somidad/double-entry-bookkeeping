@@ -1,6 +1,6 @@
-import { getDefaultConfig } from "@expo/metro-config";
+const { getDefaultConfig } = require("@expo/metro-config");
 
 const config = getDefaultConfig(__dirname);
 config.resolver.assetExts.push("txt");
 
-export default config;
+module.exports = config;
