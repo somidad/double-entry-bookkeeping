@@ -8,12 +8,19 @@ export default function Settings() {
     router.dismissAll();
   };
 
-  const MenuItem = ({ label }: { label: string }) => (
+  const MenuItem = ({
+    label,
+    onPress,
+  }: {
+    label: string;
+    onPress?: (...args: unknown[]) => void;
+  }) => (
     <TouchableOpacity
       style={{
         paddingVertical: 16,
         paddingHorizontal: 8,
       }}
+      onPress={onPress}
     >
       <Text>{label}</Text>
     </TouchableOpacity>
@@ -28,9 +35,18 @@ export default function Settings() {
       }}
     >
       <View>
-        <MenuItem label="Terms and Conditions" />
-        <MenuItem label="Privacy Policy" />
-        <MenuItem label="Open Source Licenses" />
+        <MenuItem
+          label="Terms and Conditions"
+          onPress={() => router.push("/terms")}
+        />
+        <MenuItem
+          label="Privacy Policy"
+          onPress={() => router.push("/privacy")}
+        />
+        <MenuItem
+          label="Open Source Licenses"
+          onPress={() => router.push("/open-source")}
+        />
       </View>
       <View style={{ alignItems: "center" }}>
         <Button title="Sign out" onPress={signOut} />
